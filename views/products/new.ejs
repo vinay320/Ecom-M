@@ -1,0 +1,39 @@
+<% layout('layouts/bolierplate')-%>
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <form action="/products" class="needs-validation" method="POST" novalidate>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name: </label>
+                <input  required type="text" name="name" id="name" class="form-control">
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="img" class="form-label">Image Url: </label>
+                <input  required type="text" name="img" id="img" class="form-control">
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price: </label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input  required type="number" name="price" id="price" class="form-control">
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Description: </label>
+                <textarea required rows="5" type="text" name="desc" id="desc" class="form-control">
+        
+                </textarea>
+            </div>
+            <button type="submit" class=" btn btn-sm btn-success">Add</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<% layout('layouts/bolierplate')-%>
+
+
+    
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <%for(let item of user.cart){%>
+                        <div class="card mx-auto mt-3" style="width: 30rem; display: flex; flex-direction: row;">
+                            <img height="200px" width="300px" src="<%=item.img%>" class="card-img-top"  alt="imgUrl">
+                            <div class="card-body" style="width: 300px;" >
+                                <h5 class="card-title">
+                                    Name: <%=item.name%>
+                                </h5>
+                                <h5 class="card-title">
+                                    Price: $ <%=item.price%>
+                                </h5>
+                               
+                               
+                            </div>
+                        </div>
+                        <%}%>
+                </div>
+                <div class="col-lg-4">
+                   <ul class="list-group">
+                
+                    <%for(let item of user.cart){%>
+                        <li class="list-group-item"><span style="font-weight: bold;"><%=item.name%> $</span><span>
+                            <%=item.price%>
+                        </span></li>
+                        
+                        <%}%>
+                        <li style="font-weight: bold;" class="list-group-item">Total Amount:$ <%=ttm%></li>
+                    </ul>
+                    <button class="btn btn-sm btn-success mt-3">CheckOut</button>
+                
+
+                    
+                </div>
+            </div>
+            
+        </section>
+    
+

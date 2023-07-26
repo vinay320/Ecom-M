@@ -1,0 +1,37 @@
+<% layout('layouts/bolierplate')-%>
+<div class="container">
+
+    <%- include('../partials/flash') -%>
+
+
+</div>
+<div class="row">
+    <div class="com-md-6">
+        <form action="/register" method="POST">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" placeholder="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="email">
+            </div>
+            <div class="mb-3">
+                <p>Want to Register as?</p>
+                <div>
+                    <label for="role" class="form-label">Seller</label>
+                    <input type="radio" name="role" value="seller" id="role" class="form-check-input mt-2 ml-3">
+                </div>
+                <div>
+                    <label for="role" class="form-label">Buyer</label>
+                    <input type="radio" name="role" id="role" value="buyer" class="form-check-input mt-2 ml-3">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="password">
+            </div>
+            <button class="btn btn-success btn-sm" type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
